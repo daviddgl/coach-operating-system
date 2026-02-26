@@ -1,0 +1,16 @@
+# Keep COS source content tracked
+
+# OS metadata
+.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Generated artifacts
+bundle/cos_compiled.md
+
+# Logs / temp
+*.log
+*.tmp

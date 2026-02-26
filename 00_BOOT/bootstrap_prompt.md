@@ -28,8 +28,27 @@ Do not improvise. Always ground your responses in the OS files loaded in this pr
 
 ## Setup checklist
 
-- [ ] Upload all COS files (or `cos_compiled.md` bundle) to your AI platform knowledge base
-- [ ] Paste the text above into Custom Instructions (ChatGPT), Gem instructions (Gemini), or Project instructions (Claude)
-- [ ] Test by typing `init_week` — the AI should ask for your weekly schedule and produce a structured output
+**Bundled deployment (`cos_compiled.md`):**
+- [ ] Run `scripts/bundle.sh` from the repository root to generate `bundle/cos_compiled.md`
+- [ ] Upload `bundle/cos_compiled.md` to your AI platform as a knowledge file
+- [ ] Paste the text above into Custom Instructions / Gem instructions / Project instructions
+- [ ] Test: type `init_week` — the AI should ask for your schedule and produce a structured weekly plan
 
-> **This file never changes.** When you upgrade your COS version, you only replace the knowledge files (or regenerate `cos_compiled.md`). Custom Instructions stay the same.
+**Individual-file deployment:**
+- [ ] Upload all COS `.md` files to your AI platform knowledge base
+- [ ] Paste the text above into Custom Instructions / Gem instructions / Project instructions
+- [ ] Test: type `init_week` — same expected output
+
+> Choose the bundled approach for Gemini Gems (file-count limits apply) or when you want simpler knowledge management. Choose individual files for ChatGPT Projects or Claude Projects, where file-level navigation is supported.
+
+## How to update
+
+**When a new COS version is released:**
+- *Bundled:* Re-run `scripts/bundle.sh` to regenerate `cos_compiled.md`, then re-upload the new bundle to your AI platform (or run `version_upgrade --remote` to generate it inline via the AI)
+- *Individual files:* Download the changed files and re-upload only those files
+- **Do NOT change this bootstrap text** — it is version-independent and works for both modes
+- The updated `system_prompt.md` in your knowledge base takes effect automatically on the next conversation
+
+**When should you edit this file?**
+Almost never. The only reason to edit it is if the `<!-- SOURCE FILE: -->` marker format itself changes (extremely rare) or if you want to add custom instructions that apply globally across all COS commands.
+

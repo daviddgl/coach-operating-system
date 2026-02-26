@@ -183,4 +183,40 @@ This generates a single `cos_compiled.md` file in `bundle/` containing all COS c
 
 ---
 
+### Platform Comparison
+
+| Platform | Knowledge Mechanism | Context Window | Session Persistence | Best For |
+|----------|--------------------|--------------|--------------------|----------|
+| **ChatGPT Projects** | Upload individual files to a Project | ~128k tokens | Good — Project maintains file memory across conversations | Coaches who want to work with individual files and use ChatGPT's reasoning strengths |
+| **Gemini Gems** | Gem instructions + knowledge files | ~1M tokens | Good — Gem retains instructions and files | Coaches with large bundles; Gemini's long context fits the entire `cos_compiled.md` comfortably |
+| **Claude Projects** | Upload files to a Project | ~200k tokens | Excellent — Project instructions + files persist cleanly | Coaches who value nuanced, long-form reasoning and structured output quality |
+
+> **Recommendation:** Use Gemini Gem if you prefer the bundled (`cos_compiled.md`) approach. Use ChatGPT or Claude Projects if you prefer managing individual files. All three platforms work well — the OS is designed to be platform-agnostic.
+
+---
+
+### How to Customise
+
+COS has three layers of customisation — from quick personal tweaks to full pratice overhauls:
+
+**Layer 1 — Personalise your identity (30 minutes):**
+Edit `01_KERNEL/personal_dna.md` and `01_KERNEL/coach_operating_system.md` to reflect your real coaching philosophy, communication style, and non-negotiable standards. This is the heart of the OS — the more specific and honest you are, the more useful every command becomes.
+
+**Layer 2 — Define your practice context (1 hour):**
+Edit `02_CONFIG/practice_operating_system.md` (mission, niche, revenue model) and `02_CONFIG/practice_strategy.md` (current quarter strategy, competitive positioning, growth goals). Update these whenever you pivot your practice direction.
+
+**Layer 3 — Refresh your portfolio (20 minutes per client):**
+Edit `03_DRIVERS/client_portfolio.md` (roster, capacity, referral network) and individual `client_card - [Name].md` files. These are the most frequently updated files — keep them current for `prep_session` and `onboard_client` to work well.
+
+**Adding a command:**
+Add a new entry to `05_COMMANDS/command_reference.md` using the existing command format (trigger name, category, reads from, asks for, queries, output, chains with). Then list the command in `05_COMMANDS/system_prompt.md` under the Commands section. Re-run `bundle.sh` to regenerate the bundle.
+
+**Removing a command you don't use:**
+Delete or comment out the command entry in `command_reference.md`. No other changes needed.
+
+**Swapping boardroom personas:**
+Edit `06_BOARDROOM/boardroom.md` — replace any of the 6 default personas with thinkers more relevant to your coaching domain. The `boardroom [topic]` command will automatically use your new personas.
+
+---
+
 *"This OS is a decision-support tool, not a decision-maker."*

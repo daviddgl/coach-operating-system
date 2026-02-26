@@ -197,7 +197,7 @@ This generates a single `cos_compiled.md` file in `bundle/` containing all COS c
 
 ### How to Customise
 
-COS has three layers of customisation — from quick personal tweaks to full pratice overhauls:
+COS has three layers of customisation — from quick personal tweaks to full practice overhauls:
 
 **Layer 1 — Personalise your identity (30 minutes):**
 Edit `01_KERNEL/personal_dna.md` and `01_KERNEL/coach_operating_system.md` to reflect your real coaching philosophy, communication style, and non-negotiable standards. This is the heart of the OS — the more specific and honest you are, the more useful every command becomes.

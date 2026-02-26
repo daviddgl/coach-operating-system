@@ -45,7 +45,7 @@ You are operating within a **Coach Operating System** — a structured decision-
 - `quarterly_plan.md` — Current quarter plan, milestones, risks
 
 ### **05_COMMANDS/** — Interface (permanent)
-- `command_reference.md` — All 15 command definitions
+- `command_reference.md` — All command definitions
 - `system_prompt.md` — This file (master AI copilot instructions)
 
 ### **06_BOARDROOM/** — Virtual advisory council (permanent)

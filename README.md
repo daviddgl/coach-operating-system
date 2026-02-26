@@ -50,7 +50,7 @@ The key idea: **separate the logic (how you coach) from the data (who you're coa
 3. Upload all COS files from this repository
 4. Type **`start setup`** — the AI interviews you and generates your completed files
 5. Copy the generated files into your OS folder
-6. Paste [05_COMMANDS/system_prompt.md](05_COMMANDS/system_prompt.md) into Custom Instructions (static — never changes)
+6. Paste [00_BOOT/bootstrap_prompt.md](00_BOOT/bootstrap_prompt.md) into Custom Instructions (static — never changes)
 7. Type `init_week` and you're live
 
 ### Option B: Manual Setup
@@ -58,7 +58,7 @@ The key idea: **separate the logic (how you coach) from the data (who you're coa
 1. Read [00_BOOT/README.md](00_BOOT/README.md) — architecture, portability contract, all protocols
 2. Fill in the `[bracket]` placeholders in each file (guided by `<!-- comments -->`)
 3. Upload all `.md` files to a **ChatGPT Project**, **Gemini Gem**, or **Claude Project**
-4. Paste [05_COMMANDS/system_prompt.md](05_COMMANDS/system_prompt.md) into Custom Instructions (static — never changes)
+4. Paste [00_BOOT/bootstrap_prompt.md](00_BOOT/bootstrap_prompt.md) into Custom Instructions (static — never changes)
 5. Type `init_week` and you're live
 
 ---

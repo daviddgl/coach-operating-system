@@ -55,7 +55,7 @@ All COS files have two metadata fields:
 3. Uploads all COS files to AI platform as a Knowledge Project or custom instructions
 
 **Execution Phase (Ongoing):**
-1. Coach invokes one of 15 named commands (e.g., `init_week`, `prep_session`, `prep_refresh`, `version_upgrade`)
+1. Coach invokes one of named commands (e.g., `init_week`, `prep_session`, `prep_refresh`, `version_upgrade`)
 2. Command reads relevant OS files (logic layer)
 3. Command queries external tools (Notion, Airtable, Calendar) for live data
 4. AI copilot produces structured output (decision, plan, prep notes)
@@ -105,7 +105,7 @@ When the coach changes niche, business model, or client roster, they keep KERNEL
 
 5. **Pressure Mode**: COS §12 (Pressure Mode) defines stress-indicator patterns specific to the coach. AI copilots should proactively detect these patterns in session context and suggest de-escalation (e.g., "You're in Pressure Mode — simplify or take it to supervision"). This is a safety mechanism.
 
-6. **Command independence**: Each of the 14 commands in `05_COMMANDS/command_reference.md` is self-contained and can be run in isolation. However, all commands read from the same KERNEL, CONFIG, DRIVERS, PROCESSES, and BOARDROOM files to ensure consistent decision logic across operations.
+6. **Command independence**: Each of the commands in `05_COMMANDS/command_reference.md` is self-contained and can be run in isolation. However, all commands read from the same KERNEL, CONFIG, DRIVERS, PROCESSES, and BOARDROOM files to ensure consistent decision logic across operations.
 
 ## Repository Policy
 

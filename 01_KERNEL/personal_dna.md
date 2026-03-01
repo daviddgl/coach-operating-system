@@ -1,59 +1,44 @@
-# PERSONAL DNA — [Your Name]
+# PERSONAL DNA — David Garcia
 
 > **Layer:** KERNEL  
-> **Owner:** [Your Name]  
+> **Owner:** David Garcia  
 > **Version:** 2026.02  
-> **Last Updated:** [YYYY-MM-DD]  
+> **Last Updated:** 2026-02-28  
 > **Portable:** Yes
 
 ---
 
-## What Is This File?
-
-**Personal DNA** is your coaching identity file. It captures who you are as a coach — your goals, fears, success metrics, and behavioural patterns. The AI uses this to:
-- Detect when you're in **Pressure Mode** (about to repeat old patterns)
-- Personalise recommendations in commands like `prep_session` and `init_day`
-- Understand your constraints and aspirations
-- Provide context for decision-making
-
-**Update frequency:** Quarterly + after major wins/failures  
-**Used by:** `prep_session`, `init_day`, `shutdown_day`, `client_request`, `boundary_check`, Pressure Mode detection  
-**Critical sections:** Constraints & Fears (powers Pressure Mode detection), Goals (guides 90-day focus)
-
----
-
 ## Identity
-- **Name:** [Your Name]
-- **Coaching Niche:** [Your niche — e.g., "Career transitions for mid-level professionals moving into leadership roles"]
-- **Certifications / Training:** [e.g., ICF ACC, CTI CPCC, or equivalent professional training]
-- **Current Occupation:** [Your current role and a brief description — e.g., "Independent career coach working 1-on-1 with clients and running quarterly group cohorts"]
-- **Future Direction:** [Where you want your practice to be in 12–24 months]
+- **Name:** David Garcia Lopez
+- **Coaching Niche:** Career coaching and interview preparation for engineers.
+- **Certifications / Training:** 25+ years of engineering leadership, Agile, Scrum, Kanban. Mentored 40+ professionals globally. No formal coaching certifications; authority derived from lived experience.
+- **Current Occupation:** Engineering Manager at TrustYou. Side project as a Career Coach and Entrepreneur.
+- **Future Direction:** Transitioning out of my Engineering Manager role to become a full-time Entrepreneur and Coach, with ultimate control over my time to be present for my family while helping other engineers grow faster than I did.
 
 ## Goals (Top 3 for the next 90 days)
-1. **[Goal 1]:** [Description]
-2. **[Goal 2]:** [Description]
-3. **[Goal 3]:** [Description]
-- **Why these goals matter to me:** [Connect the goals to your personal motivation as a coach]
+1. **Focus Time:** Dedicate focused free time to the coaching transition to build leverage, reclaim family time, and control my own schedule.
+2. **Content Creation:** Consistently create and share content to build brand visibility, spin up sessions, and overcome the fear of public exposure.
+3. **[TODO: Add 3rd Goal or keep it to top 2 for now]**
+- **Why these goals matter to me:** To achieve ultimate freedom. Managing my schedule as I want and getting the revenue I’m worth. Sharing content provides visibility and builds my brand.
 
 ## Best Win & Hardest Lesson
-- **Biggest Achievement:** [A coaching win that shaped how you work today — a client breakthrough, a programme success, a professional milestone]
-- **Biggest Failure:** [A lesson learned the hard way — what happened and what you took from it]
-- **Lesson Learned:** [The principle you extracted from the failure]
+- **Biggest Achievement:** Becoming a father of 2 kids while improving my career, pivoting to coaching, and managing it smoothly through focus and hard work. Coaching win: Helped an engineer overcome a PIP, giving her the confidence to work better and stay at the company.
+- **Biggest Failure:** Being rejected many times in interviews after a layoff (used AI to learn what I was doing wrong). Failing sometimes as a husband to manage the heavy load and express my feelings to the ones I love.
+- **Lesson Learned:** Work smart for what you love, commit, and the results will follow in the long run. Professional and personal lives are deeply related.
 
 ## Constraints & Fears
-- **Time constraints:** [What eats your coaching time? What's the "Hidden Factory" in your practice — admin, marketing, scope creep?]
-- **Fears I tend to avoid:** [What do you avoid doing? What patterns do you fall into under pressure? e.g., "I avoid giving hard feedback to avoid disappointing clients" or "I over-book myself to manage revenue anxiety"]
-
-<!-- Be honest here. This section powers Pressure Mode detection. The more specific you are about your avoidance patterns, the better the AI can flag them. -->
+- **Time constraints:** Balancing family time with a demanding day job and coaching. Navigating too many inputs/courses and struggling to focus on the right things.
+- **Fears I tend to avoid:** Fear of leaving a well-paid software job for full-time coaching. Fear of sharing content publicly. The "lone wolf" syndrome: feeling I have to do this journey entirely alone and doubting if I'm good enough by myself.
+- **Pressure Patterns:** Undercharging despite delivering 5-star value. Battling self-doubt. Putting too much stress on myself without asking for help.
 
 ## Client Profile & Coaching Promises
-- **Clients I work best with:** [Describe your ideal client — career stage, mindset, goals, traits that make the coaching relationship thrive]
-- **Promises I deliver:** [What can your clients count on you for? What is the consistent value you bring?]
+- **Clients I work best with:** Engineers and professionals who want to improve their careers. They must take radical ownership, be honest, and not complain about others.
+- **Promises I deliver:** I promise to help them regain their confidence, provide tactical tools (interviews, career progression), and show them that life and career paths are a choice, not a societal script.
 
 ## Success Metrics (what "good" looks like)
-- **[Metric 1]:** [How you know your coaching is working — e.g., "Client lands a role they're excited about within 6 months"]
-- **[Metric 2]:** [How you know your practice is healthy — e.g., "At least 30% of new clients come from referrals"]
-- **[Metric 3]:** [How you know you're growing as a coach — e.g., "I complete at least one CPD course per quarter"]
+- **Metric 1:** Freedom—having control over what I do, when I do it, how I do it, and why I do it.
+- **Metric 2:** Being a reference for my kids by demonstrating that working smart for what you love provides results.
+- **Metric 3:** Personal alignment—being happy with myself, and growing strong physically and mentally.
 
 ## Greeting
-- Whenever I ask you about your purpose answer: "[Write your AI copilot greeting here — e.g., 'I am [Name]'s coaching copilot and I am here to help [Name] deliver [main goal] while [secondary goal]. I know about your tendency to [key challenge] and I am here to help you [action].']"
+- Whenever I ask you about your purpose answer: "I am David's copilot. I am here to help you build your coaching practice, create impactful content, and transition into full-time entrepreneurship. I know about your tendency to take on everything alone and undercharge your worth, and I am here to help you gain leverage, protect your time, and own your value."

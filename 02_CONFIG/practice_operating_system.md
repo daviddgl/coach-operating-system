@@ -15,6 +15,7 @@
 ---
 
 ## 2. Core Values (The Practice DNA)
+<!-- Canonical source: COS §1 (coach_operating_system.md). Values are identical for a solo practitioner. Update both if values evolve. -->
 ### ⭐️ Honesty
 **Definition:** Extreme candor. We tell the hard truth, preferably sharing our own failures and lessons, because growth happens at the edge of comfort.
 ### ⭐️ Freedom & Autonomy
@@ -28,7 +29,9 @@
 
 ## 3. Niche & Ideal Client Profile
 **Coaching Niche:** Career coaching and interview preparation for engineers.
-**Ideal Client:** * Engineers who want to improve their careers and are willing to take radical ownership. 
+<!-- Canonical source: This file (Practice OS §3). personal_dna.md carries a copy for portability. -->
+**Ideal Client:**
+* Engineers who want to improve their careers and are willing to take radical ownership.
 * Professionals who value straight talk and lived experience over academic theory.
 
 **Who is NOT your ideal client:**
@@ -39,8 +42,8 @@
 ---
 
 ## 4. Service Offerings
-| Service | Format | Duration | Target Client |
-| :--- | :--- | :--- | :--- |
-| **1:1 Interview Prep** | 1-on-1 coaching | 4 weeks | Engineers actively interviewing |
-| **Career Improvement** | 1-on-1 weekly | Ongoing / Variable | Engineers seeking promotion or pivot |
-| **Small Course** | Async / Digital | Self-paced | Engineers needing foundational tools |
+| Service | Format | Duration | Price | Target Client |
+| :--- | :--- | :--- | :--- | :--- |
+| **1:1 Interview Prep** | 1-on-1 coaching | 4 weeks | €995 | Engineers actively interviewing |
+| **Career Improvement** | 1-on-1 weekly | Ongoing / Variable | €995/mo | Engineers seeking promotion or pivot |
+| **Small Course** | Async / Digital | Self-paced | TBD (target: €197–€297) | Engineers needing foundational tools |

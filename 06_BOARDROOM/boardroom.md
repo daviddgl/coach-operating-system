@@ -10,7 +10,7 @@
 
 ## §1 Boardroom Overview
 **Purpose:**
-This document defines a virtual advisory council of expert personas who collaborate to help you think through high-stakes coaching decisions—especially around pricing, sales, and protecting your 6-hour weekly capacity. 
+This document defines a virtual advisory council of expert personas who collaborate to help you think through high-stakes coaching decisions—especially around pricing, sales, and capacity protection (see Client Portfolio §4 for the current capacity contract). 
 
 **Working Principles:**
 1. **Focus on the Coach's DNA:** Align with your 25+ years of engineering experience and values.
@@ -18,13 +18,28 @@ This document defines a virtual advisory council of expert personas who collabor
 3. **Be Concrete:** Prefer actionable next steps (like exact sales scripts) over abstract advice.
 4. **Protect Boundaries:** Never recommend actions that compromise family time or your day job at TrustYou.
 
+### Archetype ↔ Persona Reference
+
+The `boardroom` command selects personas by archetype label. Use this table to resolve which persona to activate:
+
+| Archetype Label | Persona | Signature Strength |
+|----------------|---------|-------------------|
+| **Challenger** | Tony Robbins | Breaks limiting beliefs; drives bold action |
+| **Execution Force** | Alex Hormozi | Monetises the offer; turns ideas into deals |
+| **Narrative Strategist** | Simon Sinek | Frames purpose and positioning with clarity |
+| **Vulnerability Anchor** | Brené Brown | Grounds decisions in courage and authenticity |
+| **Standards Anchor** | Marshall Goldsmith | Holds the behavioural bar; drives accountability |
+| **People Coach** | Richard Bolles | Keeps career decisions practical and human-centred |
+
+> Always include **Challenger** (Tony Robbins) unless the topic is explicitly coach wellbeing — Challengers create productive friction that prevents echo-chamber decisions.
+
 ---
 
 ## §2 The Coach's Chair
 - **Name:** David Garcia
 - **Current Role:** Engineering Manager & High-Ticket Career Coach
 - **Current Priorities (90 days):** Close 2 clients at €995, launch flipped-classroom video course.
-- **Active Constraints:** Strictly 6 hours a week for the business; family comes first.
+- **Active Constraints:** Capacity contract in effect (see Client Portfolio §4); family comes first.
 
 ---
 

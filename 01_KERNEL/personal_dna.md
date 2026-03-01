@@ -10,7 +10,7 @@
 
 ## Identity
 - **Name:** David Garcia Lopez
-- **Coaching Niche:** Career coaching and interview preparation for engineers.
+- **Coaching Niche:** Career coaching and interview preparation for engineers. <!-- Derived from Practice OS §3 — update there first, then sync here. -->
 - **Certifications / Training:** 25+ years of engineering leadership, Agile, Scrum, Kanban. Mentored 40+ professionals globally. No formal coaching certifications; authority derived from lived experience.
 - **Current Occupation:** Engineering Manager at TrustYou. Side project as a Career Coach and Entrepreneur.
 - **Future Direction:** Transitioning out of my Engineering Manager role to become a full-time Entrepreneur and Coach, with ultimate control over my time to be present for my family while helping other engineers grow faster than I did.
@@ -18,7 +18,7 @@
 ## Goals (Top 3 for the next 90 days)
 1. **Focus Time:** Dedicate focused free time to the coaching transition to build leverage, reclaim family time, and control my own schedule.
 2. **Content Creation:** Consistently create and share content to build brand visibility, spin up sessions, and overcome the fear of public exposure.
-3. **[TODO: Add 3rd Goal or keep it to top 2 for now]**
+3. **Establish Peer Support:** Find a peer coach, mentor, or supervision community to break the lone-wolf pattern and build professional accountability.
 - **Why these goals matter to me:** To achieve ultimate freedom. Managing my schedule as I want and getting the revenue I’m worth. Sharing content provides visibility and builds my brand.
 
 ## Best Win & Hardest Lesson
@@ -28,8 +28,10 @@
 
 ## Constraints & Fears
 - **Time constraints:** Balancing family time with a demanding day job and coaching. Navigating too many inputs/courses and struggling to focus on the right things.
+
+## Avoidance Patterns
 - **Fears I tend to avoid:** Fear of leaving a well-paid software job for full-time coaching. Fear of sharing content publicly. The "lone wolf" syndrome: feeling I have to do this journey entirely alone and doubting if I'm good enough by myself.
-- **Pressure Patterns:** Undercharging despite delivering 5-star value. Battling self-doubt. Putting too much stress on myself without asking for help.
+- **Pressure Patterns:** Undercharging despite delivering 5-star value. Battling self-doubt. Putting too much stress on myself without asking for help. <!-- Canonical source: COS §12 (coach_operating_system.md). This entry is a summary for portability; §12 is the full protocol. -->
 
 ## Client Profile & Coaching Promises
 - **Clients I work best with:** Engineers and professionals who want to improve their careers. They must take radical ownership, be honest, and not complain about others.

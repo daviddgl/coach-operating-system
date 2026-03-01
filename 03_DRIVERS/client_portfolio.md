@@ -45,7 +45,7 @@
 
 ## 5. Practice Rituals
 * **Weekly Review (Async):** Sunday evening — 15 minutes to review the upcoming week, confirm the 6-hour block allocation, and check action items.
-* **Content Block:** [Insert your dedicated time] — focused time to draft LinkedIn posts and course modules.
+* **Content Block:** Tuesday & Thursday 7:00–8:15 AM — focused time to draft LinkedIn posts and course modules.
 
 ---
 
@@ -59,4 +59,4 @@
 | Partner / Contact | Role | Relationship | Comm Channel | Referral Direction | Carries Over |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Past Mentees (ADPList/MentorCruise)** | Former free clients | Nurture / Upsell | Email/LinkedIn | Direct upsell to course or 1:1 coaching | Yes |
-| **[TODO: Add peer coach or mentor]** | Isolation Breaker | Sounding board | TBD | Mutual support / Overflow | Yes |
+| **[Actively seeking — peer coach or supervision group]** | Isolation Breaker | Sounding board | TBD | Mutual support / Overflow | Yes |

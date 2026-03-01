@@ -305,7 +305,7 @@ Ask:
 #### Round 6A: Decision Protocol
 
 The Kernel Decision Protocol is mostly portable logic. Just confirm:
-1. **Do you agree with the 3-gate hierarchy?** (Gate 1: Portfolio Capacity → Gate 2: Practice Strategy → Gate 3: Client Fit)
+1. **Do you agree with the 3-gate hierarchy?** (Gate 1: Client Fit → Gate 2: Practice Strategy → Gate 3: Portfolio Capacity)
    > *If not, how would you reorder or change the gates?*
 2. **Rule Zero — "When in doubt, have a direct conversation with the client" — do you agree?** Any modifications?
 3. **Decision Speed — reversible decisions fast, irreversible decisions slow — does that match your style?**

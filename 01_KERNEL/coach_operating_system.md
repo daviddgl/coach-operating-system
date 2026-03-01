@@ -68,11 +68,15 @@ No session ends without:
 
 **Goal:** Apply the right coaching approach based on the client's context and session type.
 
-| Context | Coaching Mode | Behaviour |
+| Coaching Mode | When to Use | Behaviour |
 | :--- | :--- | :--- |
-| **Discovery / Default** | **Exploratory** | Ask questions so they realize the answer—this sticks more than giving direct answers. |
-| **Tactical Skill Building** | **Story, Teach, Tool** | Share my own story/experience, teach the lesson, then offer a practical tool to improve. |
-| **Accountability** | **Accountability** | Review homework and action items. Hold them to what they said they wanted. |
+| **Exploratory** | Discovery sessions, unclear goals, or when the client needs to find their own answer | Ask open questions — they discover the insight themselves. This sticks more than giving direct answers. Default mode when uncertain. |
+| **Directive** | Tactical skill building, interview prep, specific technique teaching | Use the Story–Teach–Tool pattern: share your own experience, teach the lesson, then give a practical tool to apply immediately. |
+| **Accountability** | Follow-up sessions, homework review, breaking a pattern of inaction | Review committed action items. Hold the client to what they said they wanted. No rescue — they own the outcome. |
+| **Supportive** | Client is in crisis, overwhelmed, processing a setback or rejection | Reduce challenge; increase presence. Listen without fixing. Validate before redirecting. Use sparingly — too much support disables ownership. |
+| **Facilitative** | Group dynamics, multi-stakeholder situations, or when the client needs to reach their own structured conclusion | Guide the process, not the content. Use structured tools (timelines, trade-off maps, SWOT) to help the client organise their own thinking. |
+
+**Mode switching rule:** Start every session in Exploratory. Shift mode only when the client's context clearly signals a different need. You can hold more than one mode in a single session — Exploratory to surface the problem, Directive to deliver a tool, Accountability to close with commitments.
 
 ---
 
@@ -121,7 +125,50 @@ No session ends without:
 * **Documentation:** Session notes are sent within 24 hours.
 * **Confidentiality:** Complete and absolute confidentiality for every client.
 * **Preparation:** Clients must complete and submit their homework before the session begins.
-* **Authority:** I coach from 20+ years of lived experience and engineering leadership, not from academic coaching theory.
+* **Authority:** I coach from 25+ years of lived experience and engineering leadership, not from academic coaching theory.
+
+### Post-Session Note Template
+
+Every session output (stored in Notion/Google Docs) must capture:
+
+| Field | Content |
+|-------|--------|
+| **Date & Session #** | e.g., 2026-03-05 · Session 3 |
+| **Client** | First name or alias |
+| **Energy / Mood** | Coach's state coming into the session (1–5) |
+| **Key Insight** | The one thing the client discovered or shifted |
+| **Patterns Observed** | Recurring behaviours, beliefs, or avoidance signals |
+| **Action Items** | What the client committed to before the next session |
+| **Next Session Focus** | Tentative theme or open question to carry forward |
+| **Boundary / Ethics Flag** | Any scope, relationship, or ethical signal to monitor |
+
+> **Note:** These fields feed directly into `prep_session` context. The more consistently they are completed, the higher the quality of session prep the AI can provide.
+
+---
+
+## 11. Professional Development & Supervision Standards
+
+**Purpose:** Grow continuously as a practitioner and avoid the isolation that degrades coaching quality over time.
+
+### Certifications & Formal Training
+* **Current status:** No formal coaching certifications. Authority is derived from 25+ years of engineering leadership and 40+ professionals mentored globally.
+* **Development path:** Pursuing ICF Associate Certified Coach (ACC) credential as the practice matures and revenue supports self-investment.
+
+### Supervision & Peer Consultation
+* **Principle:** Coaching without supervision is flying blind. Even experienced practitioners need a reflective space outside the client relationship.
+* **Minimum standard:** At least one peer consultation or supervision session per quarter — ideally monthly once established.
+* **Format options:** Peer coach exchange, supervision group, online coaching community (e.g., ICF chapters, LinkedIn communities).
+* **Current arrangement:** See §12 Isolation Breakers for the active contact. If none exists, this is a Priority 1 action before taking on a 2nd client.
+
+### CPD Commitments (Continuing Professional Development)
+* **Reading / Learning:** Minimum 1 coaching-related book, podcast series, or course per quarter.
+* **Reflection:** Maintain a brief coaching journal — noting patterns, breakthroughs, and ethical questions that arise in sessions.
+* **Self-application:** Apply coaching tools to my own transitions (career, content, business) before teaching them to clients.
+
+### Ethical Standards
+* **Scope of practice:** I do not offer therapy, legal advice, or financial advice. When sessions move into clinical territory, refer out.
+* **Conflict of interest:** Do not coach direct reports at my day-job employer. Keep coaching practice completely separate from any current or future employment relationships.
+* **Confidentiality:** Absolute — no case studies with identifiable details without explicit written permission.
 
 ---
 
@@ -141,7 +188,33 @@ If **two or more** of these are true, activate Pressure Mode:
 ### Isolation Breakers
 | Decision Type | Who to Call | Format |
 | :--- | :--- | :--- |
-| **All domains** | `[TODO: Identify a peer coach, mentor, or community]` | Quick sync to break the "lone wolf" pattern |
+| **All domains** | Peer coach / supervision group (see Client Portfolio §7) | Quick sync to break the "lone wolf" pattern |
+
+### Recovery
+**Purpose:** Define when Pressure Mode has resolved and what active steps close the incident.
+
+**Exit Criteria** — Pressure Mode is over when:
+- The number of active triggers drops below two, AND
+- At least one of the three Pressure Mode Rules has been applied (slowed down, got a second opinion, or documented reasoning).
+
+**Recovery Actions (choose one or more):**
+1. **Rest / Reset:** Take a deliberate break before the next decision or session — even 10 minutes away from the screen counts.
+2. **Delegation:** Identify one item that can be handed off, deferred, or dropped. Write it down.
+3. **Simplify the day:** Cancel or postpone one non-essential commitment. Protect the remaining coaching time.
+4. **Log the incident:** Write 2–3 sentences in the Pattern Log below — what triggered it, what you did, what you'll do differently. This is the single highest-leverage recovery action for long-term improvement.
+
+**Recovery Standard:** A Pressure Mode incident is not closed until it is logged. The log turns a stress event into a coaching insight for yourself.
+
+### Pressure Mode Pattern Log
+**Purpose:** Track recurring stress patterns over time so they can be recognised earlier and resolved faster.
+
+**How to use:** After any Pressure Mode activation, add a row. Review quarterly during `quarterly_reset`. This section lives in the file — it accumulates across versions.
+
+| Date | Trigger(s) Active | Context | Recovery Action Taken | Outcome / Learning |
+|------|-------------------|---------|----------------------|--------------------|
+| *(log entries added here during shutdown_day or quarterly_reset)* | | | | |
+
+> **Ref:** `shutdown_day` → "Pattern note" field writes here. `quarterly_reset` and `prep_refresh` review and update this log.
 
 ---
 

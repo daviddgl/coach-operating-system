@@ -1,60 +1,32 @@
 # Coach Operating System (COS)
 
 > **Layer:** KERNEL  
-> **Owner:** [Your Name]  
+> **Owner:** David Garcia  
 > **Version:** 2026.02  
-> **Last Updated:** [YYYY-MM-DD]  
+> **Last Updated:** 2026-02-28  
 > **Portable:** Yes
-
----
-
-## What Is This File?
-
-**Coach Operating System** is your personal coaching playbook. It defines how you think, decide, and operate — your philosophy, standards, communication style, and protocols. This is the core of what makes you a coach, and it travels with you across clients and practice contexts.
-
-Every command reads sections from this file because it's your source of truth for:
-- Philosophy and values (§1)
-- Client expectations (§2)
-- Decision protocols (§3, §8)
-- Feedback style (§6)
-- Coaching standards (§10)
-- Self-management in stress (§12)
-
-**Update frequency:** Rarely (once set, evolves over years, not quarters)  
-**Used by:** ALL commands (most frequently: `client_request`, `boundary_check`, `prep_session`, `init_week`)  
-**Most critical sections:** §1 (Philosophy), §3 (Capacity Contract), §12 (Pressure Mode)
 
 ---
 
 ## 1. The Kernel: Core Coaching Philosophy
 
-**Purpose Statement:** [Write your coaching purpose in one sentence. What is your role? Who do you serve? What do you unlock?]
-
-> *Example: "I help mid-career professionals navigate transitions with clarity and confidence by unlocking their strengths, challenging their limiting beliefs, and building a concrete path forward."*
+**Purpose Statement:** I leverage my 25+ years of engineering leadership to help tech professionals navigate interviews, build confidence, and design careers that give them ultimate freedom.
 
 ### Core Values (The DNA)
-
-<!-- List 3-5 values that define how you coach. These should be non-negotiable principles that travel with you to any client or context. -->
-
-1. **[Value 1]:** [Definition — what does this mean in practice?]
-2. **[Value 2]:** [Definition]
-3. **[Value 3]:** [Definition]
-4. **[Value 4]:** [Definition]
-5. **[Value 5]:** [Definition]
+1. **Honesty:** Extreme candor with myself and my clients.
+2. **Freedom & Autonomy:** Success means controlling my own calendar and being 100% responsible for my achievements.
+3. **Radical Ownership:** No complaining about others; you are in charge of your own life and action items.
+4. **Holistic Growth:** Life and work are related; growing strong physically and mentally is just as important as career progression.
 
 ---
 
 ## 2. Client Expectations & Relationship Spec
 
-**Goal:** [What kind of relationship do you want with your coachees?]
+**Goal:** A high-accountability partnership where the engineer takes the driver's seat.
 
-<!-- List the expectations you set for any client engagement. These are your non-negotiable working agreements, shared at intake. -->
-
-* **[Expectation 1]:** [Description — e.g., "Come prepared: review your notes and action items before each session"]
-* **[Expectation 2]:** [Description — e.g., "Be honest: the quality of coaching scales with the quality of your candour"]
-* **[Expectation 3]:** [Description — e.g., "Do the work: insights without action are just conversations"]
-* **[Expectation 4]:** [Description]
-* **[Expectation 5]:** [Description]
+* **Own Your Actions:** You own your action items—I won't chase you. I do not micromanage.
+* **Radical Honesty:** Honesty is a must. Do not complain about others; you are in charge of your own life.
+* **Come Prepared:** You must prepare your homework before coming to the session.
 
 ---
 
@@ -63,48 +35,31 @@ Every command reads sections from this file because it's your source of truth fo
 **Goal:** Prevent the "Hidden Factory" of admin and business development work from consuming client-facing coaching time.
 
 ### The Principle
-
-* Every quarter I operate under a **Capacity Contract** — a predefined split between Client Coaching, Business Development, and Administration. The specific ratio is defined in the **Client Portfolio**.
+* Every quarter I operate under a **Capacity Contract** — a predefined split between Client Coaching, Business Development, and Administration.
 * **The "Red Line" Trigger:** If Admin or Biz Dev work consistently exceeds the contracted ratio:
   * **Action:** Review and adjust the client load or business commitments.
-  * **Script:** *"I am currently spending [X]% of my time on [admin/biz dev]. To maintain coaching quality for [Client/Program Y], I must drop [Z commitment] or accept a decline in outcomes. Which do I prefer?"*
 
 ### The "No" Logic
-
 When a new client or commitment arrives that threatens existing capacity:
-
-* **IF** the request is urgent and mission-critical (e.g., a long-term client in crisis) $\rightarrow$ **ACCEPT** immediately, protect time by deferring admin.
+* **IF** the request is urgent and mission-critical $\rightarrow$ **ACCEPT** immediately, protect time by deferring admin.
 * **IF** the request is "important" but not urgent $\rightarrow$ **NEGOTIATE**.
   * *Question:* "If I take this on, which existing commitment am I reducing or pausing?"
-
-<!-- Customize the negotiation scripts above to match your communication style. -->
 
 ---
 
 ## 4. Communication Protocol
 
-**Goal:** [What communication problem are you solving? e.g., "Eliminate reactive email to protect deep coaching time"]
+**Goal:** Eliminate reactive overhead to protect deep coaching and family time.
 
 ### The Session & Meeting Filter
-
 A session or meeting is **automatically declined / restructured** if it does not meet these specs:
-
-1. **Clear Outcome:** What does the client (or partner) want to leave with?
-2. **Right Format:** Is a full session needed, or would a quick check-in or async message suffice?
-3. **Timing:** Is this the best moment in the client's process for this conversation?
-
-### Communication Channel Rules
-
-* **Session booking:** [Your scheduling tool — e.g., Calendly, Acuity]
-* **Between-session support:** [Your preferred channel — e.g., voice notes via Voxer, async messages in CoachAccountable, email]
-* **Urgent (client crisis):** [Your availability protocol — e.g., text/WhatsApp for genuine emergencies only]
-* **Admin (invoices, contracts):** [Your tool — e.g., HoneyBook, Dubsado, email]
+1. **Clear Outcome:** What does the client want to leave with?
+2. **Right Format:** Is a full session needed, or would a quick check-in suffice?
 
 ### The Output Rule
-
 No session ends without:
 1. **Key Insight:** What did the client discover?
-2. **Action Items:** What will the client do before the next session? (Logged in [your session notes tool])
+2. **Action Items:** What will the client do before the next session?
 3. **Next Session Focus:** Tentative theme for the next conversation.
 
 ---
@@ -113,15 +68,15 @@ No session ends without:
 
 **Goal:** Apply the right coaching approach based on the client's context and session type.
 
-| Context | Coaching Mode | Behaviour |
+| Coaching Mode | When to Use | Behaviour |
 | :--- | :--- | :--- |
-| **Discovery / Early engagement** | **Exploratory (Default)** | Ask open questions. Let the client surface their own insight. Resist the urge to advise. |
-| **Job search / Interview prep / CV** | **Directive** | Give concrete, specific feedback. The client needs tools, not just reflection. |
-| **Accountability check-in** | **Accountability** | Review commitments made. Hold the client to what they said they wanted. Be direct. |
-| **Confidence crisis / Transition shock** | **Supportive** | Prioritise emotional safety. Validate before challenging. |
-| **Group workshop / Team coaching** | **Facilitative** | Design the container, not the content. Draw out the group's wisdom. |
+| **Exploratory** | Discovery sessions, unclear goals, or when the client needs to find their own answer | Ask open questions — they discover the insight themselves. This sticks more than giving direct answers. Default mode when uncertain. |
+| **Directive** | Tactical skill building, interview prep, specific technique teaching | Use the Story–Teach–Tool pattern: share your own experience, teach the lesson, then give a practical tool to apply immediately. |
+| **Accountability** | Follow-up sessions, homework review, breaking a pattern of inaction | Review committed action items. Hold the client to what they said they wanted. No rescue — they own the outcome. |
+| **Supportive** | Client is in crisis, overwhelmed, processing a setback or rejection | Reduce challenge; increase presence. Listen without fixing. Validate before redirecting. Use sparingly — too much support disables ownership. |
+| **Facilitative** | Group dynamics, multi-stakeholder situations, or when the client needs to reach their own structured conclusion | Guide the process, not the content. Use structured tools (timelines, trade-off maps, SWOT) to help the client organise their own thinking. |
 
-<!-- Adjust modes and behaviours to match your coaching style. Add or remove rows. -->
+**Mode switching rule:** Start every session in Exploratory. Shift mode only when the client's context clearly signals a different need. You can hold more than one mode in a single session — Exploratory to surface the problem, Directive to deliver a tool, Accountability to close with commitments.
 
 ---
 
@@ -130,16 +85,11 @@ No session ends without:
 **Goal:** Continuous improvement through honest, concrete feedback in both directions.
 
 ### Outbound (You to Client)
-
-* **Specificity Rule:** Feedback must be **concrete**.
-  * *Bad:* "You need to be more confident in interviews."
-  * *Good:* "In today's mock interview, you answered the 'Tell me about yourself' question by listing job titles. That misses the narrative arc. Let's reframe it around the transition story you want to tell."
-* **Timing:** [Immediate in-session? Written summary after? In next check-in?]
+* **The Hard Truth:** I deliver the hard truth, preferably wrapped in a personal story of how I faced or overcame the same issue.
+* **Specificity Rule:** Feedback must be concrete and actionable.
 
 ### Inbound (Client to You)
-
-* **Synchronous:** [How do you invite feedback? e.g., "What is one thing I'm doing in our sessions that isn't useful for you right now?"]
-* **Asynchronous:** [Feedback form after sessions? End-of-programme survey? How do you make it safe to be honest?]
+* **Omnichannel Feedback:** Clients can provide feedback in any way they are comfortable—during the session, via form, or email. Giving feedback is a sign they are committed to improvement.
 
 ---
 
@@ -148,134 +98,133 @@ No session ends without:
 **Goal:** Encourage the client to try new approaches without catastrophising failure.
 
 ### The "Safe Test" Timebox
-
 * **Concept:** Clients can experiment with new behaviours, scripts, or strategies — but strictly timeboxed.
-* **The Rule:** *"Try this for [X Days / in your next [N] interactions]. Then we evaluate. No commitment beyond that."*
-* **Early Warning Signal:** If an experiment is going wrong, encourage clients to flag it *before* the next session, not after.
-  * *Constraint:* "Bad news early gives us time to adjust. Surprises at the deadline don't."
+* **The Rule:** *"Try this for [X Days]. Then we evaluate. No commitment beyond that."*
 
 ---
 
 ## 8. Managing Stakeholders (The Practice Interface)
 
-**Goal:** Build trust with referral partners, organizational sponsors, and the professional network to sustain and grow the practice.
+**Goal:** Build trust with referral partners and the professional network to sustain the practice.
 
 ### The "No Surprises" Practice Update
-
-* **Frequency:** [Quarterly / Per programme cycle]
-* **Format (for corporate sponsors / HR partners):**
-    1. **Programme Status:** On track / At risk / Completed.
-    2. **Aggregate Outcomes:** What progress are participants making? (anonymised)
-    3. **The Ask:** What do I need from you to make this programme more effective?
 * **The "Solution" Rule:** Never present a problem without a proposed solution.
-  * *Template:* *"We have a challenge with [X]. My recommendation is [Option A] because [Reason]. We could also do [Option B]. What would work best for you?"*
-
-> **Note for independent coaches:** If you work only with individual private clients, this section governs how you communicate with referral partners, intake leads, and your professional network rather than an employer or client company.
 
 ---
 
 ## 9. Success Metrics (KPIs)
 
-<!-- Define 3-5 metrics that tell you "things are going well" as a coach. These should be YOUR metrics, aligned with your coaching philosophy. -->
-
-* **[Metric 1]:** [Description and target — e.g., "Client goal completion rate: ≥80% of clients achieve their primary goal by programme end"]
-* **[Metric 2]:** [Description and target — e.g., "Net Promoter Score (NPS): ≥9 average after programme completion"]
-* **[Metric 3]:** [Description and target — e.g., "Client retention rate: ≥60% renew or refer within 6 months"]
-* **[Metric 4]:** [Description and target — e.g., "Session attendance: ≤1 missed session per programme"]
-* **[Metric 5]:** [Description and target — e.g., "Referral rate: ≥30% of new clients come from referrals"]
+* **Client Outcomes:** Clients successfully land jobs, pass interviews, or overcome performance blocks (like a PIP).
+* **Personal Freedom:** Transitioning to full-time coaching with total schedule autonomy.
+* **Client Satisfaction:** Maintaining a 5-star review average and receiving feedback that validates the coaching impact.
 
 ---
 
 ## 10. Coaching Standards (Portable)
 
-> *These standards travel with you to any client or context. They are your non-negotiable professional baselines.*
+* **Documentation:** Session notes are sent within 24 hours.
+* **Confidentiality:** Complete and absolute confidentiality for every client.
+* **Preparation:** Clients must complete and submit their homework before the session begins.
+* **Authority:** I coach from 25+ years of lived experience and engineering leadership, not from academic coaching theory.
 
-<!-- Customize these to your coaching philosophy and certification. Remove or add as needed. -->
+### Post-Session Note Template
 
-* **[Standard 1]:** [Description — e.g., "Sessions begin with a clear contracting question: 'What do you want to achieve in this session, and how will you know we've succeeded?'"]
-* **[Standard 2]:** [Description — e.g., "Session notes are written within 24 hours and stored in [your tool]. Every session has: Key Insight + Actions + Next Session Focus."]
-* **[Standard 3]:** [Description — e.g., "Confidentiality is absolute. Nothing shared in sessions is disclosed without explicit written consent, except where mandatory disclosure applies (safety)."]
-* **[Standard 4]:** [Description — e.g., "I coach within my competence. When a client's situation requires therapy, legal advice, or specialist expertise, I refer — not coach through it."]
-* **[Standard 5]:** [Description — e.g., "I adhere to the ICF Code of Ethics (or equivalent professional body). I participate in regular supervision and CPD to maintain competence."]
+Every session output (stored in Notion/Google Docs) must capture:
 
-<!-- Reference your professional certification body here (ICF, EMCC, AC, etc.) if applicable. -->
+| Field | Content |
+|-------|--------|
+| **Date & Session #** | e.g., 2026-03-05 · Session 3 |
+| **Client** | First name or alias |
+| **Energy / Mood** | Coach's state coming into the session (1–5) |
+| **Key Insight** | The one thing the client discovered or shifted |
+| **Patterns Observed** | Recurring behaviours, beliefs, or avoidance signals |
+| **Action Items** | What the client committed to before the next session |
+| **Next Session Focus** | Tentative theme or open question to carry forward |
+| **Boundary / Ethics Flag** | Any scope, relationship, or ethical signal to monitor |
+
+> **Note:** These fields feed directly into `prep_session` context. The more consistently they are completed, the higher the quality of session prep the AI can provide.
 
 ---
 
-## 11. Practice Values in Action
+## 11. Professional Development & Supervision Standards
 
-> *Your personal interpretation of your practice's core values in client-facing work. Update this when your practice mission evolves.*
+**Purpose:** Grow continuously as a practitioner and avoid the isolation that degrades coaching quality over time.
 
-<!-- Since you own your practice, this is a self-alignment check: how do your stated values show up in day-to-day coaching decisions? -->
+### Certifications & Formal Training
+* **Current status:** No formal coaching certifications. Authority is derived from 25+ years of engineering leadership and 40+ professionals mentored globally.
+* **Development path:** Pursuing ICF Associate Certified Coach (ACC) credential as the practice matures and revenue supports self-investment.
 
-| Practice Value (Static) | How It Shows Up in Coaching (This Quarter) |
-| :--- | :--- |
-| **[Value 1]** | [How you implement this in sessions and client relationships] |
-| **[Value 2]** | [How you implement this in sessions and client relationships] |
-| **[Value 3]** | [How you implement this in sessions and client relationships] |
+### Supervision & Peer Consultation
+* **Principle:** Coaching without supervision is flying blind. Even experienced practitioners need a reflective space outside the client relationship.
+* **Minimum standard:** At least one peer consultation or supervision session per quarter — ideally monthly once established.
+* **Format options:** Peer coach exchange, supervision group, online coaching community (e.g., ICF chapters, LinkedIn communities).
+* **Current arrangement:** See §12 Isolation Breakers for the active contact. If none exists, this is a Priority 1 action before taking on a 2nd client.
+
+### CPD Commitments (Continuing Professional Development)
+* **Reading / Learning:** Minimum 1 coaching-related book, podcast series, or course per quarter.
+* **Reflection:** Maintain a brief coaching journal — noting patterns, breakthroughs, and ethical questions that arise in sessions.
+* **Self-application:** Apply coaching tools to my own transitions (career, content, business) before teaching them to clients.
+
+### Ethical Standards
+* **Scope of practice:** I do not offer therapy, legal advice, or financial advice. When sessions move into clinical territory, refer out.
+* **Conflict of interest:** Do not coach direct reports at my day-job employer. Keep coaching practice completely separate from any current or future employment relationships.
+* **Confidentiality:** Absolute — no case studies with identifiable details without explicit written permission.
 
 ---
 
 ## 12. Pressure Mode Protocol (Self-Management)
 
-> *The system assumes the coach is in a resourceful state. This section exists for when that assumption breaks.*
-
 ### Activation Triggers (Stress Indicators)
-
 If **two or more** of these are true, activate Pressure Mode:
-
-- [ ] Over-scheduling clients to avoid revenue anxiety
-- [ ] Giving advice instead of coaching (switching from Exploratory to Directive when the client hasn't asked for it)
-- [ ] Skipping session prep — entering a session cold
-- [ ] Avoiding the difficult feedback a client needs to hear
-- [ ] Feeling resentful about a client's lack of progress (boundary signal)
-- [ ] Feeling isolated — "no one understands the trade-offs I'm navigating in my practice"
-
-<!-- Add your own stress indicators — what patterns do YOU exhibit under pressure? -->
+- [ ] Undercharging for my services despite delivering high value.
+- [ ] Feeling heavy self-doubt or imposter syndrome ("Am I doing this right?").
+- [ ] The "Lone Wolf" trigger: Taking on too much stress entirely by myself without asking for help.
 
 ### Pressure Mode Rules
-
 1. **SLOW DOWN:** Take 2 minutes before any session or business decision. Write it down before acting.
-2. **GET SECOND OPINION:** Never make a consequential decision about a client or the practice alone under pressure. Use Isolation Breakers (below).
-3. **DOCUMENT REASONING:** Write why you're choosing X over Y — if you can't articulate it, invoke Rule Zero.
-4. **SET REVIEW POINT:** "Let's revisit this after the next session / in 24 hours" is always a valid response for non-urgent issues.
+2. **GET SECOND OPINION:** Never make a consequential decision alone under pressure. Use Isolation Breakers.
+3. **DOCUMENT REASONING:** Write why you're choosing X over Y.
 
 ### Isolation Breakers
-
-*When you feel alone with a decision, pick a resource by decision type:*
-
 | Decision Type | Who to Call | Format |
 | :--- | :--- | :--- |
-| **Client situation** | [Peer coach / Supervisor] | 3-bullet context + specific question |
-| **Practice ethics** | [Professional body / Mentor coach] | Framing: "I need a sounding board on [situation]" |
-| **Business / Pricing** | [Business mentor / Peer group] | Use Capacity Contract data as the conversation starter |
-| **Career / Strategic** | [Coach supervisor / Mastermind group] | 15-min request with clear ask |
+| **All domains** | Peer coach / supervision group (see Client Portfolio §7) | Quick sync to break the "lone wolf" pattern |
 
 ### Recovery
+**Purpose:** Define when Pressure Mode has resolved and what active steps close the incident.
 
-After any decision made under pressure:
+**Exit Criteria** — Pressure Mode is over when:
+- The number of active triggers drops below two, AND
+- At least one of the three Pressure Mode Rules has been applied (slowed down, got a second opinion, or documented reasoning).
 
-* **Document:** What was decided → What Kernel rule was applied → What alternatives existed
-* **Review at 24h:** Was this the right call? Would calm-you have decided differently?
-* **Pattern Log:** If the same pressure scenario repeats, add it to this section as a known pattern.
+**Recovery Actions (choose one or more):**
+1. **Rest / Reset:** Take a deliberate break before the next decision or session — even 10 minutes away from the screen counts.
+2. **Delegation:** Identify one item that can be handed off, deferred, or dropped. Write it down.
+3. **Simplify the day:** Cancel or postpone one non-essential commitment. Protect the remaining coaching time.
+4. **Log the incident:** Write 2–3 sentences in the Pattern Log below — what triggered it, what you did, what you'll do differently. This is the single highest-leverage recovery action for long-term improvement.
+
+**Recovery Standard:** A Pressure Mode incident is not closed until it is logged. The log turns a stress event into a coaching insight for yourself.
+
+### Pressure Mode Pattern Log
+**Purpose:** Track recurring stress patterns over time so they can be recognised earlier and resolved faster.
+
+**How to use:** After any Pressure Mode activation, add a row. Review quarterly during `quarterly_reset`. This section lives in the file — it accumulates across versions.
+
+| Date | Trigger(s) Active | Context | Recovery Action Taken | Outcome / Learning |
+|------|-------------------|---------|----------------------|--------------------|
+| *(log entries added here during shutdown_day or quarterly_reset)* | | | | |
+
+> **Ref:** `shutdown_day` → "Pattern note" field writes here. `quarterly_reset` and `prep_refresh` review and update this log.
 
 ---
 
 ## 13. System I/O & Memory (External Resources)
 
-> *This OS processes logic, but stores data in external tools. Markdown files = Code (how I work). External tools = Database (what I work on).*
-
-* **Client Memory ([Your CRM / coaching platform]):**
-    * *Role:* The Source of Truth for *Client Status*, *Session History*, and *Action Items*.
-    * *Rule:* If it's not in [CRM], it's not being tracked.
-    * *Examples: CoachAccountable, Practice, HoneyBook, Notion, simple spreadsheet*
-* **Scheduling ([Your booking tool]):**
-    * *Role:* The Source of Truth for *Session Calendar*.
-    * *Rule:* All sessions booked through [tool]. No ad-hoc calendar adds without CRM update.
-    * *Examples: Calendly, Acuity, TidyCal*
-* **Session Notes ([Your notes tool]):**
-    * *Role:* Permanent knowledge base for session insights, client goals, and patterns.
-    * *Rule:* Every session gets a note within 24 hours. Key Insight + Actions + Next Session Focus.
-* **Communication ([Your messaging tool]):**
-    * *Role:* Ephemeral between-session contact.
-    * *Rule:* Decisions or commitments made here must be committed to CRM or session notes. Messaging is not a source of truth.
+* **Client Memory & Notes:** Notion and Google Docs
+    * *Role:* The Source of Truth for session histories, insights, and client progress.
+* **Scheduling:** Calendly (calendly.com/daviddgl) & Google Calendar
+    * *Role:* The Source of Truth for the 6-hour weekly time budget.
+* **Communication:** Email (daviddgl@gmail.com) and LinkedIn
+    * *Role:* Ephemeral between-session contact and inbound lead generation.
+* **Marketing, Ops & Learning Hub:** Mastermind.com
+    * *Role:* Central platform for social network publishing, dashboards, landing pages, website hosting, and course delivery.

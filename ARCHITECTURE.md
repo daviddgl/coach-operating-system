@@ -287,11 +287,11 @@ This shows how the Decision Protocol (KERNEL §1) applies layered gates when a n
 graph TD
     REQ["📬 New Request Arrives<br/>(Client? New programme? Scope change?)<br/>From: Lead or existing client"]
 
-    GATE1{"Gate 1: Capacity<br/>(from DRIVERS §4)<br/><br/>Do I have coaching<br/>hours available?"}
+    GATE1{"Gate 1: Client Fit<br/>(from Decision Protocol §1)<br/><br/>Is this the right person?<br/>Values + ownership + niche?"}
 
     GATE2{"Gate 2: Practice Strategy<br/>(from CONFIG §1)<br/><br/>Does it align with<br/>my niche and goals?"}
 
-    GATE3{"Gate 3: Client Fit<br/>(from DRIVERS cards)<br/><br/>Is this the right person<br/>at the right time?"}
+    GATE3{"Gate 3: Capacity<br/>(from DRIVERS §4)<br/><br/>Do I have coaching<br/>hours available?"}
 
     ACCEPT["✅ ACCEPT<br/>Add to roster / programme"]
     NEGOTIATE["🤝 NEGOTIATE<br/>Pre-filled script<br/>from KERNEL §3"]
@@ -299,13 +299,13 @@ graph TD
     WAIT["⏸️ WAITLIST<br/>Flag for next quarter"]
 
     REQ --> GATE1
-    GATE1 -->|Yes - capacity available| GATE2
-    GATE1 -->|No - at capacity| WAIT
+    GATE1 -->|Strong fit| GATE2
+    GATE1 -->|Poor fit - values misaligned| DECLINE
     GATE2 -->|Aligned| GATE3
     GATE2 -->|Misaligned| NEGOTIATE
-    GATE3 -->|Strong fit| ACCEPT
-    GATE3 -->|Partial fit| NEGOTIATE
-    GATE3 -->|Poor fit| DECLINE
+    GATE3 -->|Capacity available| ACCEPT
+    GATE3 -->|Partial capacity| NEGOTIATE
+    GATE3 -->|At capacity| WAIT
 
     style REQ fill:#404040,stroke:#9c27b0
     style GATE1 fill:#404040,stroke:#fbc02d

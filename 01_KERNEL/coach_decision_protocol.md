@@ -1,101 +1,110 @@
 # Coach Decision Protocol
 
 > **Layer:** KERNEL  
-> **Owner:** [Your Name]  
+> **Owner:** David Garcia  
 > **Version:** 2026.02  
-> **Last Updated:** [YYYY-MM-DD]  
+> **Last Updated:** 2026-02-28  
 > **Portable:** Yes
 
 ---
 
-## What Is This File?
-
-**Decision Protocol** is your conflict resolution logic — how you choose between competing priorities when they clash. It defines the 3-gate hierarchy (Capacity → Practice Strategy → Client Fit) and enforcement rules.
-
-This file is used when:
-- Handling `client_request` — which new clients or commitments to accept
-- Running `boundary_check` — how to resolve conflicts or scope creep
-- Planning `prep_program` — prioritizing your programme design
-
-**Update frequency:** Rarely (foundational; built during SETUP_WIZARD)  
-**Used by:** `client_request`, `boundary_check`, `prep_program`  
-**Core concept:** Rule Zero ("When in doubt, talk in person") + 3-gate hierarchy
-
----
-
-**Purpose:** To resolve conflicts and guide execution using the Coach Operating System (COS) files.
-
 ## 0. Rule Zero: The Human Handshake (Default to Speak)
-
-* **Principle:** This OS is a *decision-support* tool, not a decision-maker. It calculates trade-offs, but humans make the call.
+* **Principle:** This OS is a *decision-support* tool, not a decision-maker. It calculates trade-offs, but David makes the call.
 * **The Trigger:** If the rules below result in a logical conflict, ambiguity, or a "bad gut feeling," the system halts.
-* **The Action:**
-    1. Stop the async/logic flow.
-    2. **Speak:** Have a synchronous conversation — with the client, a peer coach, or a supervisor as appropriate.
-    3. **Goal:** Use the OS outputs (Pros/Cons) as the agenda, but decide face-to-face.
-* **Override Authority:** Any human can invoke Rule Zero at any time. It cannot be overridden by any other rule.
+* **The Action:** Stop the async/logic flow. Have a synchronous conversation.
 
 ---
 
 ## 1. The Hierarchy of Precedence (Order of Operations)
+When making a decision, apply constraints in this specific order:
 
-When making a decision, apply constraints in this specific order (Local $\rightarrow$ Global):
-
-1. **Level 1: The Capacity Contract (Local Context)**
-    * *Why?* Your coaching calendar is the execution unit. Your bandwidth determines *if* you can take on new work at the quality you promise.
-    * *Rule:* If a request violates the **Capacity Contract** (defined in Client Portfolio §4), it is blocked, regardless of how compelling the opportunity appears (unless it's a genuine emergency for an existing client).
+1. **Level 1: Client Fit (The Non-Negotiable Core)**
+    * *Why?* If the engineer is not willing to do the work and take radical ownership, the rest doesn't matter.
+    * *Rule:* Match the engagement to the client's mindset. If they complain about others or refuse to do homework, DECLINE immediately.
 2. **Level 2: Practice Strategy (Global Direction)**
-    * *Why?* If you have capacity, the work must align with where your practice is headed.
-    * *Rule:* Choose the path that maximises your **Practice Strategy** North Star (niche focus, revenue target, impact goal).
-3. **Level 3: Client Fit (Personal Context)**
-    * *Why?* Long-term coaching relationships require genuine mutual fit.
-    * *Rule:* Match the engagement to the client's goals and your competence, using the **Client Card** (Career Profile, Goals, Communication Preferences).
+    * *Why?* The work must align with where the practice is headed.
+    * *Rule:* Choose the path that maximises your North Star (validating the premium model or building the video course).
+3. **Level 3: Capacity (The Flexible Boundary)**
+    * *Why?* You operate under a strict weekly capacity contract (see Client Portfolio §4 for current figures) to protect your TrustYou job and family time.
+    * *Rule:* If Fit and Strategy are perfectly aligned, you may choose to *amplify* capacity temporarily to accommodate the client. If not, block the request or NEGOTIATE the timeline.
 
 ---
 
 ## 2. Interaction Rules (The API)
 
 ### Rule A: The "Override" Function
-
-* **Scenario:** Your practice values say "slow, deep coaching relationships," but an opportunity arrives for a high-volume corporate programme at compelling revenue.
-* **Logic:** The **Client Portfolio** principles override the business opportunity for *how* you engage.
-  * *Result:* You can pursue the programme *if* you can maintain your session quality standards. You do not compromise your Coaching Standards (COS §10).
+* **Scenario:** A prospect wants to pay the full amount, but they want you to rewrite their CV for them instead of doing it themselves.
+* **Logic:** Level 1 (Client Fit) overrides Level 2 (Strategy/Revenue). You decline the work because it violates your radical ownership standard. 
 
 ### Rule B: The "Conflict" Function
-
-* **Scenario:** Two prospective clients compete for the same slot, or two opportunities consume the same bandwidth.
-* **Logic:**
-    1. Check **Practice Strategy**: Which client or programme aligns better with your current quarter's North Star?
-    2. Check **Client Portfolio**: Does one engagement reduce "Hidden Admin" (ops overhead) relative to the other?
-    3. **Decision:** Prioritise the intersection of Strategic Alignment + Low Overhead.
+* **Scenario:** Two perfect-fit clients want your last available hour.
+* **Logic:** Prioritize the one that aligns best with your Practice Strategy (e.g., the one willing to engage with the flipped-classroom video model).
 
 ### Rule C: The "Exception" Function
-
-* **Scenario:** An existing long-term client is in genuine crisis (redundancy, mental health emergency, a critical career juncture).
-* **Logic:** **Suspend normal scheduling rules.**
-  * Switch to **Supportive Coaching Mode** (COS §5).
-  * Defer non-urgent admin or business development.
-  * Restore standard protocols immediately after the acute phase passes.
-  * If the situation exceeds coaching scope → trigger `boundary_check`.
+* **Scenario:** Family emergency or kids get sick.
+* **Logic:** Suspend normal scheduling. Protect family first. Rely on the asynchronous video course material to keep clients moving forward while live sessions are paused.
 
 ---
 
-## 3. Execution Loops
+## 3. New Request Loop (Iteration Protocol)
 
-### The "New Request" Loop
+**Purpose:** Define how to handle a new client request, scope change, or opportunity through the 3-gate hierarchy — including what to do when a gate fails and how to re-enter the loop.
 
-```mermaid
-graph TD
-    A[New Client or Commitment Arrives] --> B{Do I have coaching capacity?}
-    B -- No, sessions exceed Capacity Contract --> C[Decline/Negotiate based on Client Portfolio]
-    B -- Yes --> D{Does it align with current Practice Strategy?}
-    D -- No --> E[Deprioritise/Decline]
-    D -- Yes --> F[Evaluate Client Fit via Client Card / intake process]
+### The Loop
+
+```
+1. RECEIVE request (client, referral, or self-generated opportunity)
+2. RUN Gate 1 — Client Fit
+   → PASS: proceed to Gate 2
+   → FAIL (values misaligned): DECLINE immediately. Log reason. Loop ends.
+3. RUN Gate 2 — Practice Strategy
+   → PASS (aligned or neutral): proceed to Gate 3
+   → FAIL (misaligned): NEGOTIATE scope or DEFER. If not negotiable → DECLINE. Loop ends.
+4. RUN Gate 3 — Capacity
+   → PASS: ACCEPT. → Onboard via `onboard_client`
+   → FAIL (at capacity): WAITLIST with re-evaluation date (next quarter start)
+   → PARTIAL (near capacity): NEGOTIATE terms (e.g., lighter engagement, async model)
+5. DOCUMENT outcome in Notion/CRM with gate results and rationale.
+6. REVIEW at next quarterly_reset — were WAITLIST or NEGOTIATE decisions revisited?
 ```
 
+### Re-Entry Rules
+* A WAITLISTED request re-enters the loop at Gate 3 only (Fit and Strategy already cleared).
+* A NEGOTIATED request re-enters the loop at the gate that triggered negotiation.
+* A DECLINED request does NOT re-enter — a new request from the same person is treated as a fresh evaluation.
+
+### Rule Zero Override
+* If any gate produces a "gut conflict" (logical pass but feels wrong), invoke Rule Zero: stop the loop and have a direct conversation before proceeding.
+
 ---
 
-## 4. Decision Speed (Reversibility Check)
+## 4. Decision Speed (Reversibility Framework)
 
-* **Reversible Decisions:** Make them fast. A single exploratory conversation with a prospect, trying a new session format, adjusting a programme structure mid-engagement — bias toward action.
-* **Irreversible Decisions:** Require a clear-eyed review before committing. Examples: signing a year-long corporate contract, publicly announcing a niche pivot, ending an ongoing client relationship. If in doubt, invoke Rule Zero.
+**Purpose:** Match decision pace to decision weight. Move fast on reversible things; slow down on irreversible ones.
+
+### The Test
+
+> *"If I get this wrong, can I undo it within 30 days without significant cost to a client, my family, or the practice?"*
+
+| Answer | Classification | Speed |
+|--------|--------------|-------|
+| Yes, easily | **Reversible** | Decide fast — bias toward action |
+| Yes, with effort | **Partially reversible** | Decide within 48 hours with at least one input |
+| No | **Irreversible** | Decide slow — mandatory Rule Zero check + Boardroom consult if high stakes |
+
+### Examples by Category
+
+| Decision | Reversible? | Speed Rule |
+|----------|------------|------------|
+| Try a new session format / framework | ✅ Yes | Decide in the session |
+| Post a LinkedIn article or opinion piece | ✅ Yes | Bias toward publishing |
+| Offer a discount or trial session | ⚠️ Partial | 48-hour rule — check Practice Strategy first |
+| Change the price point (up or down) | ⚠️ Partial | 48-hour rule — run Boardroom first |
+| Accept a new 1:1 client commitment | ❌ No | Run full 3-gate loop. Slow down. |
+| Drop an active client | ❌ No | Rule Zero + Boardroom. Write it out before any conversation. |
+| Leave TrustYou / go full-time coaching | ❌ No | Rule Zero. Family conversation first. Not an OS decision. |
+
+### Pressure Mode Interaction
+* Under Pressure Mode (§12), the bias toward fast decisions is **suspended**.
+* All decisions above "Reversible" require explicit written reasoning before acting.
+* See §12 Pressure Mode Rules: "Write it down before acting."

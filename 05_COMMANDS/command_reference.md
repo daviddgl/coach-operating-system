@@ -1,9 +1,9 @@
 # Command Reference
 
 > **Layer:** COMMANDS  
-> **Owner:** [Your Name]  
+> **Owner:** David Garcia  
 > **Version:** 2026.02  
-> **Last Updated:** [YYYY-MM-DD]  
+> **Last Updated:** 2026-03-01  
 > **Portable:** Yes
 
 ---
@@ -651,15 +651,20 @@ First session will focus on [First-month goal]. See you [date/time].
 
 ---
 
-## Gate 1: Capacity (Level 1)
-**Capacity Contract:** [From Portfolio §4]
-**Current utilisation:** [%]
-**Available headroom:** [Hours or client slots]
+## Gate 1: Client Fit (Level 1)
+| Criterion | Assessment | Score |
+|-----------|-----------|-------|
+| Niche alignment | [Yes / Partial / No] | H/M/L |
+| Readiness for coaching | [Yes / Partial / No] | H/M/L |
+| Values alignment | [Yes / Partial / No] | H/M/L |
+| Expected programme match | [Yes / Partial / No] | H/M/L |
+
+**Best-fit assessment:** [Summary]
 **Result:** ✅ PASS / ❌ FAIL
 
-**If FAIL → Invoke "No" Logic (COS §3):**
-- Is this a strategic priority that overrides current load? [Yes → NEGOTIATE / No → DECLINE or WAITLIST]
-- Pre-filled communication: [Script]
+**If FAIL (Values alignment = No):** DECLINE immediately (Decision Protocol §1 — values misalignment is non-negotiable regardless of other criteria)
+
+**If FAIL for other reasons (niche, readiness, or programme mismatch) and Values alignment = Yes/Partial:** Do not proceed now — document the rationale, consider flagging as a "future-fit lead" or referral (from Portfolio §7), then move to the next opportunity (Decision Protocol §1–§2)
 
 ---
 
@@ -670,15 +675,15 @@ First session will focus on [First-month goal]. See you [date/time].
 
 ---
 
-## Gate 3: Client Fit (Level 3)
-| Criterion | Assessment | Score |
-|-----------|-----------|-------|
-| Niche alignment | [Yes / Partial / No] | H/M/L |
-| Readiness for coaching | [Yes / Partial / No] | H/M/L |
-| Values alignment | [Yes / Partial / No] | H/M/L |
-| Expected programme match | [Yes / Partial / No] | H/M/L |
+## Gate 3: Capacity (Level 3)
+**Capacity Contract:** [From Portfolio §4]
+**Current utilisation:** [%]
+**Available headroom:** [Hours or client slots]
+**Result:** ✅ PASS / ❌ FAIL
 
-**Best-fit assessment:** [Summary]
+**If FAIL → Invoke "No" Logic (COS §3):**
+- Is this a strategic priority that warrants a temporary capacity stretch? [Yes → NEGOTIATE / No → DECLINE or WAITLIST]
+- Pre-filled communication: [Script]
 
 ---
 

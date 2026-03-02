@@ -1,9 +1,9 @@
-# Coach Operating System (COS) — [Your Name]
+# Coach Operating System (COS) — David Garcia
 
 > **Layer:** BOOT  
-> **Owner:** [Your Name]  
+> **Owner:** David Garcia  
 > **Version:** 2026.02  
-> **Last Updated:** [YYYY-MM-DD]  
+> **Last Updated:** 2026-03-01  
 > **Portable:** Yes
 
 ---

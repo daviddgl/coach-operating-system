@@ -1,53 +1,91 @@
 #!/bin/bash
 # =============================================================================
-# COS Bundle Generator
+# Professional Operating System — Bundle Generator
 # =============================================================================
 #
 # PURPOSE:
-#   Compiles all Coach Operating System (COS) source files into a single
-#   cos_compiled.md file for upload to AI platforms.
+#   Compiles all Professional OS source files into a single compiled markdown
+#   file for upload to AI platforms (ChatGPT, Gemini, Claude, etc.)
 #
 # USAGE:
-#   ./scripts/bundle.sh
-#   (Run from the repository root or from anywhere — script locates repo root)
+#   scripts/bundle.sh
+#   scripts/bundle.sh --name "Coach" --abbrev "COS"   # explicit override
+#
+# CONFIGURATION (recommended):
+#   Create a bundle.conf at the repo root:
+#     PROFESSION=coach
+#     ABBREVIATION=COS
+#     DISPLAY_NAME=Coach
+#
+#   If bundle.conf is absent, auto-detects from 01_KERNEL/*_operating_system.md
 #
 # OUTPUT:
-#   bundle/cos_compiled.md — single file containing all COS content, ready
-#   to upload to ChatGPT Projects, Gemini Gems, or Claude Projects.
+#   bundle/{abbrev_lower}_compiled.md  (e.g., cos_compiled.md, mos_compiled.md)
 #
-# HOW IT WORKS:
-#   Each file is wrapped with a SOURCE FILE marker so the AI copilot can
-#   locate individual files by name within the bundle:
-#     <!-- SOURCE FILE: 05_COMMANDS/system_prompt.md -->
-#
-# DEPLOYMENT STEPS AFTER RUNNING:
-#   1. Upload bundle/cos_compiled.md to your AI platform's knowledge base
+# DEPLOYMENT:
+#   1. Upload bundle/{abbrev}_compiled.md to your AI platform knowledge base
 #   2. Paste 00_BOOT/bootstrap_prompt.md into Custom Instructions (once only)
-#   3. Test with: init_week
+#   3. Test: type init_week in your AI conversation
 # =============================================================================
 
 set -e
 
-# ── Colours ──────────────────────────────────────────────────────────────────
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
-# ── Paths ─────────────────────────────────────────────────────────────────────
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# ── Parse optional CLI overrides ─────────────────────────────────────────────
+CLI_DISPLAY_NAME=""
+CLI_ABBREVIATION=""
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --name)   CLI_DISPLAY_NAME="$2"; shift 2 ;;
+    --abbrev) CLI_ABBREVIATION="$2"; shift 2 ;;
+    *) echo -e "${RED}Unknown option: $1${NC}"; exit 1 ;;
+  esac
+done
+
+# ── Load configuration ────────────────────────────────────────────────────────
+CONF_FILE="$REPO_ROOT/bundle.conf"
+if [ -f "$CONF_FILE" ]; then
+  # shellcheck source=/dev/null
+  source "$CONF_FILE"
+else
+  # Auto-detect from 01_KERNEL/*_operating_system.md filename
+  kernel_file=$(ls "$REPO_ROOT/01_KERNEL/"*_operating_system.md 2>/dev/null | grep -v personal_dna | head -1)
+  if [ -z "$kernel_file" ]; then
+    echo -e "${RED}Error: No *_operating_system.md found in 01_KERNEL/ and no bundle.conf present.${NC}"
+    echo "  Create a bundle.conf or ensure 01_KERNEL/ contains your profession file."
+    exit 1
+  fi
+  PROFESSION=$(basename "$kernel_file" "_operating_system.md")
+  # Abbreviation: first letter of each word + OS  (product_manager → PMOS)
+  ABBREVIATION=$(echo "$PROFESSION" | sed 's/_/ /g' | awk '{s=""; for(i=1;i<=NF;i++) s=s toupper(substr($i,1,1)); print s "OS"}')
+  # Display name: title-case  (product_manager → Product Manager)
+  DISPLAY_NAME=$(echo "$PROFESSION" | sed 's/_/ /g' | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2); print}')
+fi
+
+# Apply CLI overrides if provided
+[[ -n "$CLI_DISPLAY_NAME" ]] && DISPLAY_NAME="$CLI_DISPLAY_NAME"
+[[ -n "$CLI_ABBREVIATION" ]] && ABBREVIATION="$CLI_ABBREVIATION"
+
+ABBREV_LOWER=$(echo "$ABBREVIATION" | tr '[:upper:]' '[:lower:]')
 BUNDLE_DIR="$REPO_ROOT/bundle"
-OUTPUT_FILE="$BUNDLE_DIR/cos_compiled.md"
+OUTPUT_FILE="$BUNDLE_DIR/${ABBREV_LOWER}_compiled.md"
 
 mkdir -p "$BUNDLE_DIR"
 rm -f "$OUTPUT_FILE"
 
-echo -e "${BLUE}COS Bundle Generator${NC}"
-echo -e "${BLUE}════════════════════${NC}"
+echo -e "${BLUE}${DISPLAY_NAME} Operating System (${ABBREVIATION}) — Bundle Generator${NC}"
+echo -e "${BLUE}═══════════════════════════════════════════════════════════════${NC}"
 echo ""
-echo -e "Repository root: ${YELLOW}$REPO_ROOT${NC}"
-echo -e "Output:          ${YELLOW}$OUTPUT_FILE${NC}"
+echo -e "  Profession   : ${YELLOW}${DISPLAY_NAME}${NC}"
+echo -e "  Abbreviation : ${YELLOW}${ABBREVIATION}${NC}"
+echo -e "  Output       : ${YELLOW}${OUTPUT_FILE}${NC}"
 echo ""
 
 # ── Helper ────────────────────────────────────────────────────────────────────
@@ -77,13 +115,12 @@ add_file_to_bundle() {
 
 # ── Bundle header ─────────────────────────────────────────────────────────────
 {
-  echo "# Coach Operating System (COS) — Compiled Bundle"
+  echo "# ${DISPLAY_NAME} Operating System (${ABBREVIATION}) — Compiled Bundle"
   echo ""
   echo "> **Generated:** $(date '+%Y-%m-%d %H:%M')"
   echo ">"
-  echo "> This is a complete COS compilation in a single document for AI platform"
-  echo "> knowledge uploads. Upload this file to your AI platform's knowledge base,"
-  echo "> then paste \`00_BOOT/bootstrap_prompt.md\` into Custom Instructions."
+  echo "> Upload this file to your AI platform knowledge base, then paste"
+  echo "> \`00_BOOT/bootstrap_prompt.md\` into Custom Instructions."
   echo ""
   echo "---"
   echo ""
@@ -92,35 +129,41 @@ add_file_to_bundle() {
 # ── Layer 00: Boot ────────────────────────────────────────────────────────────
 echo -e "${BLUE}▸ 00_BOOT${NC}"
 add_file_to_bundle "$REPO_ROOT/00_BOOT/README.md"
-# Note: bootstrap_prompt.md is NOT bundled — it's pasted into Custom Instructions
+# Note: bootstrap_prompt.md is NOT bundled — paste into Custom Instructions
 
 # ── Layer 01: Kernel ─────────────────────────────────────────────────────────
 echo -e "${BLUE}▸ 01_KERNEL${NC}"
-add_file_to_bundle "$REPO_ROOT/01_KERNEL/coach_operating_system.md"
-add_file_to_bundle "$REPO_ROOT/01_KERNEL/coach_decision_protocol.md"
+add_file_to_bundle "$REPO_ROOT/01_KERNEL/${PROFESSION}_operating_system.md"
+add_file_to_bundle "$REPO_ROOT/01_KERNEL/${PROFESSION}_decision_protocol.md"
 add_file_to_bundle "$REPO_ROOT/01_KERNEL/personal_dna.md"
 
 # ── Layer 02: Config ─────────────────────────────────────────────────────────
 echo -e "${BLUE}▸ 02_CONFIG${NC}"
-add_file_to_bundle "$REPO_ROOT/02_CONFIG/practice_operating_system.md"
-add_file_to_bundle "$REPO_ROOT/02_CONFIG/practice_strategy.md"
+for f in "$REPO_ROOT"/02_CONFIG/*_operating_system.md "$REPO_ROOT"/02_CONFIG/*_strategy.md; do
+  [ -f "$f" ] && add_file_to_bundle "$f"
+done
 
 # ── Layer 03: Drivers ────────────────────────────────────────────────────────
 echo -e "${BLUE}▸ 03_DRIVERS${NC}"
-add_file_to_bundle "$REPO_ROOT/03_DRIVERS/client_portfolio.md"
-
-client_cards=("$REPO_ROOT"/03_DRIVERS/client_card*.md)
-if [ -e "${client_cards[0]}" ]; then
-  for client_card in "${client_cards[@]}"; do
-    add_file_to_bundle "$client_card"
+# Roster file: *_operating_system.md or *_portfolio.md in 03_DRIVERS
+for f in "$REPO_ROOT"/03_DRIVERS/*_operating_system.md "$REPO_ROOT"/03_DRIVERS/*_portfolio.md; do
+  [ -f "$f" ] && add_file_to_bundle "$f"
+done
+# Entity cards: player_card*, client_card*, stakeholder_card*, etc.
+entity_cards=("$REPO_ROOT"/03_DRIVERS/*_card*.md)
+if [ -e "${entity_cards[0]}" ]; then
+  for card in "${entity_cards[@]}"; do
+    add_file_to_bundle "$card"
   done
 else
-  echo -e "  ${YELLOW}⚠  No client_card files found — create them via onboard_client${NC}"
+  echo -e "  ${YELLOW}⚠  No entity card files found — create via onboard command${NC}"
 fi
 
 # ── Layer 04: Processes ──────────────────────────────────────────────────────
 echo -e "${BLUE}▸ 04_PROCESSES${NC}"
-add_file_to_bundle "$REPO_ROOT/04_PROCESSES/quarterly_plan.md"
+for f in "$REPO_ROOT"/04_PROCESSES/*_plan.md; do
+  [ -f "$f" ] && add_file_to_bundle "$f"
+done
 
 # ── Layer 05: Commands ───────────────────────────────────────────────────────
 echo -e "${BLUE}▸ 05_COMMANDS${NC}"
@@ -134,31 +177,23 @@ add_file_to_bundle "$REPO_ROOT/06_BOARDROOM/boardroom.md"
 # ── Summary ───────────────────────────────────────────────────────────────────
 echo ""
 echo -e "${GREEN}✓ Bundle complete!${NC}"
-echo ""
-
 LINE_COUNT=$(wc -l < "$OUTPUT_FILE")
-BYTE_SIZE=$(wc -c < "$OUTPUT_FILE")
-BYTE_SIZE_KB=$((BYTE_SIZE / 1024))
-
-echo -e "  Files bundled : ${YELLOW}$FILE_COUNT${NC}"
-echo -e "  Lines         : ${YELLOW}$LINE_COUNT${NC}"
-echo -e "  Size          : ${YELLOW}${BYTE_SIZE_KB} KB${NC}"
-echo ""
-echo -e "  Output: ${YELLOW}$OUTPUT_FILE${NC}"
+BYTE_SIZE_KB=$(( $(wc -c < "$OUTPUT_FILE") / 1024 ))
+echo -e "  Files: ${YELLOW}${FILE_COUNT}${NC}  |  Lines: ${YELLOW}${LINE_COUNT}${NC}  |  Size: ${YELLOW}${BYTE_SIZE_KB} KB${NC}"
+echo -e "  Output: ${YELLOW}${OUTPUT_FILE}${NC}"
 echo ""
 
 # ── Verification ──────────────────────────────────────────────────────────────
 if grep -q "SOURCE FILE: 05_COMMANDS/system_prompt.md" "$OUTPUT_FILE"; then
   echo -e "  ${GREEN}✓ system_prompt.md marker verified${NC}"
 else
-  echo -e "  ${RED}✗ WARNING: system_prompt.md marker not found in bundle${NC}"
+  echo -e "  ${RED}✗ WARNING: system_prompt.md not found in bundle${NC}"
 fi
 echo ""
 
 # ── Next steps ────────────────────────────────────────────────────────────────
 echo -e "${BLUE}Next steps:${NC}"
-echo "  1. Upload   bundle/cos_compiled.md  →  AI platform knowledge base"
-echo "  2. Paste    00_BOOT/bootstrap_prompt.md  →  Custom Instructions (once)"
-echo "  3. Test:    type 'init_week' in your AI conversation"
+echo "  1. Upload bundle/${ABBREV_LOWER}_compiled.md  →  AI platform knowledge base"
+echo "  2. Paste  00_BOOT/bootstrap_prompt.md  →  Custom Instructions (once)"
+echo "  3. Test:  type init_week in your AI conversation"
 echo ""
-

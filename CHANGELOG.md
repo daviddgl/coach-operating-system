@@ -29,11 +29,13 @@ The upgrade preserves all your existing data and only asks about new/changed sec
 - **Archetype ↔ Persona Reference mapping table** added to `06_BOARDROOM/boardroom.md §1`: Maps the 6 command-layer archetype labels (Challenger, Execution Force, Narrative Strategist, Vulnerability Anchor, Standards Anchor, People Coach) to the 6 named personas.
 - **Price column** added to `02_CONFIG/practice_operating_system.md §4` Service Offerings table: 1:1 coaching €995, course TBD (target €197–€297).
 - **Coaching modes expanded to 5** in `01_KERNEL/coach_operating_system.md §5`: Added Directive, Supportive, and Facilitative modes alongside existing Exploratory and Accountability. Replaced "Story, Teach, Tool" row with "Directive" (Story–Teach–Tool remains as the technique within that mode). Added mode-switching rule.
-- **`bundle.conf`** added to repository root: Declares `PROFESSION=coach`, `ABBREVIATION=COS`, `DISPLAY_NAME=Coach Operating System` for the parameterized `scripts/bundle.sh` (part of Professional OS Framework compliance).
+- **`bundle.conf`** added to repository root: Declares `PROFESSION=coach`, `ABBREVIATION=COS`, `DISPLAY_NAME="Coach Operating System"` for the parameterized `scripts/bundle.sh` (part of Professional OS Framework compliance).
+- **`scripts/bundle.sh` replaced** with parameterized version from Professional OS Framework: Reads `bundle.conf` for profession identity; auto-detects from `01_KERNEL/*_operating_system.md` filename if no conf file; globs layers 02/03/04 dynamically instead of hardcoding paths; outputs `{abbrev_lower}_compiled.md`. Backward-compatible — same output for COS as previous version.
 
 ### Changed
 
-- **Gate order aligned** across all downstream files to match Decision Protocol §1 canonical order (Client Fit → Practice Strategy → Capacity):
+- **`ARCHITECTURE.md` boardroom references updated**: Diagram 4 command table changed `BOARDROOM §1,2,3` → `BOARDROOM §1–§5`; Diagram 8 node label changed `Working principles · Coach Chair` → `§1 Roster · §2 Principles · §5 Chair` to reflect the new boardroom §1–§5 section structure.
+- **`Portable: Yes` reason clause** added in 7 portable files (see full list above in compliance fixes section).
   - `05_COMMANDS/system_prompt.md`: Updated Critical Rules table, Walkthrough 2 steps, failure criteria, and edge case example.
   - `05_COMMANDS/command_reference.md`: Swapped Gate 1/Gate 3 content in `client_request` output template (Gate 1 now Client Fit; Gate 3 now Capacity).
   - `ARCHITECTURE.md`: Updated Diagram 7 Mermaid nodes and edge labels.
@@ -70,6 +72,7 @@ The upgrade preserves all your existing data and only asks about new/changed sec
 10. **Restructure `boardroom.md`** from §1–§3 to §1–§5 using this release as the template. Your persona content and Coach's Chair data carry forward unchanged — only section structure and headings change.
 11. **Fix freshness emoji** in `command_reference.md`: Change `🔴 coach_decision_protocol.md — 30-day grace` to `🟢` in both `client_request` and `boundary_check` commands. Replace `quarterly_reset` freshness block with the per-file 🔴/🟡/🟢 entries from this release.
 12. **Add reason clause** to all `Portable: Yes` file headers using the formulas from this release's `### Changed` entry.
+13. **Replace `scripts/bundle.sh`** with the parameterized version from this release. Create `bundle.conf` at repo root with `PROFESSION=coach`, `ABBREVIATION=COS`, `DISPLAY_NAME="Coach Operating System"` (quote the value — it contains spaces). Verify with `bash scripts/bundle.sh`.
 8. **Fill Last Updated headers** in `00_BOOT/README.md`, `command_reference.md`, `system_prompt.md`.
 
 ---

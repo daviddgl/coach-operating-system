@@ -182,7 +182,7 @@ This table shows the logic: what context does each command read, what data does 
 | `client_request [desc]` | KERNEL Decision Protocol + DRIVERS §2,4,7 + CONFIG §1 + PROCESSES | Effort, requestor, reversibility | — | Gate analysis + ACCEPT/NEGOTIATE/DECLINE |
 | `boundary_check [topic]` | KERNEL §10,12 + Decision Protocol §0,1,4 | Context, concern type | — | Safe-action plan + referral options |
 | `quarterly_reset` | CONFIG + KERNEL + DRIVERS + PROCESSES | New strategy, roster changes | — | New Q plan template |
-| `boardroom [topic]` | BOARDROOM §1,2,3 + KERNEL DNA + COS §12 | Topic, session depth | — | Multi-persona advisory + synthesis |
+| `boardroom [topic]` | BOARDROOM §1–§5 + KERNEL DNA + COS §12 | Topic, session depth | — | Multi-persona advisory + synthesis |
 
 ---
 
@@ -357,7 +357,7 @@ graph LR
     end
 
     subgraph Boardroom["06_BOARDROOM - Advisory Council"]
-        BM["boardroom.md<br/>6 coaching-domain personas<br/>Working principles · Coach Chair"]
+        BM["boardroom.md<br/>6 coaching-domain personas<br/>§1 Roster · §2 Principles · §5 Chair"]
     end
 
     Boot --- Kernel

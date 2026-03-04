@@ -4,7 +4,7 @@
 > **Owner:** David Garcia  
 > **Version:** 2026.02  
 > **Last Updated:** 2026-02-28  
-> **Portable:** Yes
+> **Portable:** Yes — travels with the coach across all contexts
 
 ---
 

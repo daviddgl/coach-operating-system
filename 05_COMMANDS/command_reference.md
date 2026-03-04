@@ -4,7 +4,7 @@
 > **Owner:** David Garcia  
 > **Version:** 2026.02  
 > **Last Updated:** 2026-03-01  
-> **Portable:** Yes
+> **Portable:** Yes — command logic is context-independent
 
 ---
 
@@ -634,7 +634,7 @@ First session will focus on [First-month goal]. See you [date/time].
 - Is this reversible? (Can you exit if it doesn't work?)
 
 **Critical Files for Freshness:**
-- 🔴 `coach_decision_protocol.md` — 30-day grace (protocol logic must be current)
+- � `coach_decision_protocol.md` — 30-day grace (protocol logic must be current)
 - 🟡 `practice_strategy.md` — 3-day grace (North Star gate)
 - 🟡 `client_portfolio.md` — 3-day grace (Capacity Contract gate)
 - 🔴 `quarterly_plan.md` — 0-day grace (what gets displaced?)
@@ -730,7 +730,7 @@ First session will focus on [First-month goal]. See you [date/time].
 - Potential impact if the situation is left unaddressed
 
 **Critical Files for Freshness:**
-- 🔴 `coach_decision_protocol.md` — 30-day grace (Rule Zero + boundary logic)
+- � `coach_decision_protocol.md` — 30-day grace (Rule Zero + boundary logic)
 - 🟢 `personal_dna.md` — 30-day grace (avoidance pattern check)
 
 **Output Format:**
@@ -790,8 +790,13 @@ Log this boundary check in Notion/session notes with: date, type, action taken, 
 - Specific risks from the previous quarter to address going forward
 
 **Critical Files for Freshness:**
-- ⚠️ All files will be updated during this reset
-- Start with the most stale files first (run `prep_refresh` first if needed)
+- 🔴 `quarterly_plan.md` — 0-day grace (replace with new quarter plan)
+- 🟡 `practice_strategy.md` — 3-day grace (North Star must reflect new quarter)
+- 🟡 `client_portfolio.md` — 3-day grace (roster + capacity contract must be current)
+- 🟢 `coach_operating_system.md`, `personal_dna.md`, `coach_decision_protocol.md` — 30-day grace
+- 🟢 `boardroom.md` — quarterly review
+
+> Run `prep_refresh` first if any files are stale — start with the most overdue.
 
 **Output Format:**
 ```
@@ -832,6 +837,10 @@ Log this boundary check in Notion/session notes with: date, type, action taken, 
 ```
 
 **Chains With:** `prep_refresh` (run first if files are stale), `prep_program` (new quarter planning after reset), `retro` (retro feeds into the quarterly review section)
+
+---
+
+> **Also in this category:** `boardroom [topic]` — classified as Decision Support. Full definition below, after all other categories, for readability.
 
 ---
 
@@ -1062,15 +1071,13 @@ After all migration steps are complete, if bundle generation is confirmed:
 
 ---
 
-## 🎙️ BOARDROOM COMMAND
-
 ### `boardroom [topic]`
 
 **Trigger:** High-stakes uncertainty — you need adversarial, multi-perspective input before deciding  
 **Purpose:** Convene your virtual advisory council — activate the most relevant personas, get each perspective and probing questions, then synthesise into a decision-ready output
 
 **OS Files to Read:**
-- `06_BOARDROOM/boardroom.md` — §1 Working Principles, §2 Coach's Chair, §3 All Personas
+- `06_BOARDROOM/boardroom.md` — §1 Persona Roster, §2 Working Principles, §3 Activation Logic, §5 Coach's Chair
 - `01_KERNEL/personal_dna.md` — Goals, Constraints & Fears, Avoidance Patterns
 - `01_KERNEL/coach_operating_system.md` — §12 Pressure Mode (is this session stress-driven?)
 

@@ -4,7 +4,7 @@
 > **Owner:** David Garcia  
 > **Version:** 2026.02  
 > **Last Updated:** 2026-03-01  
-> **Portable:** Yes
+> **Portable:** Yes — AI instructions are context-independent
 
 ---
 

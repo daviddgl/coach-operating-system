@@ -4,23 +4,15 @@
 > **Owner:** David Garcia  
 > **Version:** 2026.02  
 > **Last Updated:** 2026-02-28  
-> **Portable:** Yes
+> **Portable:** Yes — advisory council travels with the coach
 
 ---
 
-## §1 Boardroom Overview
-**Purpose:**
-This document defines a virtual advisory council of expert personas who collaborate to help you think through high-stakes coaching decisions—especially around pricing, sales, and capacity protection (see Client Portfolio §4 for the current capacity contract). 
+## §1 — Persona Roster
 
-**Working Principles:**
-1. **Focus on the Coach's DNA:** Align with your 25+ years of engineering experience and values.
-2. **Challenge Assumptions:** Include at least one contrarian perspective in complex decisions.
-3. **Be Concrete:** Prefer actionable next steps (like exact sales scripts) over abstract advice.
-4. **Protect Boundaries:** Never recommend actions that compromise family time or your day job at TrustYou.
+Six virtual advisors. Each brings a distinct lens. The `boardroom [topic]` command selects 3–4 based on the topic type (see §3 Activation Logic).
 
 ### Archetype ↔ Persona Reference
-
-The `boardroom` command selects personas by archetype label. Use this table to resolve which persona to activate:
 
 | Archetype Label | Persona | Signature Strength |
 |----------------|---------|-------------------|
@@ -35,15 +27,7 @@ The `boardroom` command selects personas by archetype label. Use this table to r
 
 ---
 
-## §2 The Coach's Chair
-- **Name:** David Garcia
-- **Current Role:** Engineering Manager & High-Ticket Career Coach
-- **Current Priorities (90 days):** Close 2 clients at €995, launch flipped-classroom video course.
-- **Active Constraints:** Capacity contract in effect (see Client Portfolio §4); family comes first.
-
----
-
-## §3 Boardroom Personas
+### Personas
 
 ### Persona 1 — Tony Robbins · The Peak Performance & Action Catalyst
 - **Role:** Drives state management, confidence, and massive action.
@@ -92,3 +76,91 @@ The `boardroom` command selects personas by archetype label. Use this table to r
 - **Probing Questions:**
   1. What concrete step moves this person closer to role-fit this week?
   2. What evidence would prove this direction is right or wrong?
+
+---
+
+## §2 — Working Principles
+
+These principles govern how the boardroom operates. All four apply to every session; the AI copilot must respect them when generating boardroom output.
+
+1. **Focus on the Coach's DNA:** Align with your 25+ years of engineering experience and values. Recommendations that ignore this context are disqualified.
+2. **Challenge Assumptions:** Include at least one contrarian perspective in complex decisions. Echo-chamber responses are disallowed.
+3. **Be Concrete:** Prefer actionable next steps (like exact sales scripts) over abstract advice.
+4. **Protect Boundaries:** Never recommend actions that compromise family time or your day job at TrustYou.
+
+---
+
+## §3 — Activation Logic
+
+Auto-select 3–4 personas based on topic type. The `boardroom [topic]` command uses this table to determine which personas activate.
+
+| Topic Type | Activate |
+|------------|---------||
+| Client relationship / trust / rapport | People Coach + Vulnerability Anchor + Challenger |
+| Delivery / accountability / outcomes | Execution Force + Standards Anchor + Challenger |
+| Strategy / positioning / niche | Narrative Strategist + Execution Force + Challenger |
+| Multi-faceted / complex decision | All 4 core personas |
+| Coach wellbeing / burnout / pressure | Vulnerability Anchor + Narrative Strategist + People Coach |
+
+> **Challenger rule:** Always include the Challenger unless the topic is explicitly wellbeing-focused.
+
+---
+
+## §4 — Session Format
+
+Standard output structure for a `boardroom [topic]` call.
+
+```
+# Boardroom Session — [Topic Summary]
+**Date:** [Today]
+**Session Depth:** [Quick / Full]
+
+---
+
+## Personas Activated
+[List 3–4 personas selected, with one-line rationale for each]
+
+---
+
+## [Persona Name] — [Role]
+> *"[Their worldview or signature quote]"*
+
+**Their Take:**
+[2–4 sentences of their perspective on the topic, voiced in their style]
+
+**They Ask:**
+1. [Probing question that challenges your framing]
+2. [Second probing question that opens a new angle]
+
+---
+
+[Repeat for each activated persona]
+
+---
+
+## Integrated Synthesis
+**Where they agree:**
+- [Point of consensus]
+
+**Where they diverge:**
+- [Persona A] wants [X] — [Persona B] pushes back with [Y]
+
+**Recommended next action:**
+[One concrete, actionable step you can take today]
+
+---
+
+> Rule Zero: The boardroom advises. You decide.
+> Run `client_request` or `boundary_check` if this requires a formal protocol.
+```
+
+---
+
+## §5 — The Coach's Chair
+
+<!-- Update this section when running `prep_refresh` or `quarterly_reset` -->
+
+- **Name:** David Garcia
+- **Current Role:** Engineering Manager & High-Ticket Career Coach
+- **Current Priorities (90 days):** Close 2 clients at €995, launch flipped-classroom video course.
+- **Active Constraints:** Capacity contract in effect (see Client Portfolio §4); family comes first.

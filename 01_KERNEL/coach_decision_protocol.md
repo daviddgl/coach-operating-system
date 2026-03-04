@@ -4,18 +4,31 @@
 > **Owner:** David Garcia  
 > **Version:** 2026.02  
 > **Last Updated:** 2026-02-28  
-> **Portable:** Yes
+> **Portable:** Yes — travels with the coach across all contexts
 
 ---
 
-## 0. Rule Zero: The Human Handshake (Default to Speak)
-* **Principle:** This OS is a *decision-support* tool, not a decision-maker. It calculates trade-offs, but David makes the call.
-* **The Trigger:** If the rules below result in a logical conflict, ambiguity, or a "bad gut feeling," the system halts.
-* **The Action:** Stop the async/logic flow. Have a synchronous conversation.
+### §0 — Rule Zero
+
+The OS is a decision-SUPPORT tool. It does not make decisions.
+
+When OS rules produce any of the following:
+- Conflicting outputs from two or more gates
+- A recommendation that feels wrong in context
+- Ambiguity that cannot be resolved by re-reading the relevant files
+- A "bad gut feeling" that persists after analysis
+
+**Stop. Invoke Rule Zero. Have a synchronous human conversation.**
+
+Rule Zero supersedes all other rules. Any human can invoke it at any time, including
+the AI copilot if it detects unresolvable ambiguity. It cannot be overridden by
+any other rule in the OS.
+
+The action is always the same: talk to a human, directly, before deciding.
 
 ---
 
-## 1. The Hierarchy of Precedence (Order of Operations)
+### §1 — Hierarchy of Precedence (Order of Operations)
 When making a decision, apply constraints in this specific order:
 
 1. **Level 1: Client Fit (The Non-Negotiable Core)**
@@ -30,7 +43,7 @@ When making a decision, apply constraints in this specific order:
 
 ---
 
-## 2. Interaction Rules (The API)
+### §2 — Interaction Rules (The API)
 
 ### Rule A: The "Override" Function
 * **Scenario:** A prospect wants to pay the full amount, but they want you to rewrite their CV for them instead of doing it themselves.
@@ -46,7 +59,7 @@ When making a decision, apply constraints in this specific order:
 
 ---
 
-## 3. New Request Loop (Iteration Protocol)
+### §3 — New Request Loop (Iteration Protocol)
 
 **Purpose:** Define how to handle a new client request, scope change, or opportunity through the 3-gate hierarchy — including what to do when a gate fails and how to re-enter the loop.
 
@@ -78,7 +91,7 @@ When making a decision, apply constraints in this specific order:
 
 ---
 
-## 4. Decision Speed (Reversibility Framework)
+### §4 — Decision Speed (Reversibility Framework)
 
 **Purpose:** Match decision pace to decision weight. Move fast on reversible things; slow down on irreversible ones.
 
